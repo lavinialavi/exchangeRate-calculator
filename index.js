@@ -12,6 +12,14 @@ function calculateExchangeRate() {
     )
 }
 
+    function copyResult() {
+        var copyText = document.getElementById("result");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        alert("Copied the text: " + copyText.value);
+      }
+
 
 function calculate(from, to, amount) {
     let result = 0;
@@ -34,7 +42,7 @@ function calculate(from, to, amount) {
                 return result;
             }
         )
-        .catch(function(err) {
+        .catch(function (err) {
             console.log(err)
         })
 }
