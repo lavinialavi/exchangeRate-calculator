@@ -24,6 +24,7 @@ function calculateExchangeRate() {
 function calculate(from, to, amount) {
     let result = 0;
 
+
     const url = 'https://api.exchangeratesapi.io/latest?&base=';
 
 
@@ -38,28 +39,29 @@ function calculate(from, to, amount) {
             function (obj) {
                 console.log(obj.rates[to]);
                 result = obj.rates[to] * amount;
-
+                
                 return result;
             }
+            
         )
         .catch(function (err) {
             console.log(err)
         })
 
     }
-function calculatorTva (){
-     var result= document.getElementById("result").value;
-     var tva= document.getElementById("tva").value;
-     var procent =tva/100;
-   document.getElementById("valtva").value= procent;
-   calcVat(procent);
+function calculatorTva (result){
+    var result= document.getElementById("result").value;
+    var tva= 20 ;
+    var tvavalue= Number (tva) * Number (result);
+   document.getElementById("valtva").innerHTML= tvavalue;
+   calcTotal(tvavalue);
     
    
 
-    function calcVat (procent){
+    function calcTotal(tvavalue){
         var result= document.getElementById("result").value;
-        let bigresult= result* procent;
-        document.getElementById("derezultattva").innerHTML=bigresult;
+        let bigresult= result +tvavalue;
+        document.getElementById("rezultattva").innerHTML=bigresult;
     }
     
 }

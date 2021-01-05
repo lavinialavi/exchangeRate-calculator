@@ -12,14 +12,14 @@
 <body>
   <form>
     <div class="h-screen bg-gray-200 flex flex-col items-center justify-center">
-      <div class="h-64 w-10/12 sm:w-8/12 md:w-3/6 lg:w-1/3">
+      <div class="h-70 w-10/12 sm:w-8/12 md:w-3/6 lg:w-1/3">
         <div class="bg-white h-full shadow px-4 py-1">
           <h1 class="text-center text-lg font-bold my-3">Convertor valutar</h1>
           <div class="flex flex-wrap">
             <div class="w-1/2">
               Schimba din
             </div>
-            <div class="w-1/2">
+            <div class="w-1/2 border-black">
               <select id="input1" name="" id="" class="w-full">
                 <option value="EUR">EUR</option>
                 <option value="RON">RON</option>
@@ -46,23 +46,33 @@
             <div class="w-1/2">
               Rezultate
             </div>
-            <div class="w-1/2 flex">
-              <input id="result" type="text" class="bg-red-100 w-full flex-grow" />
+            <div class="w-1/2 flex my-1">
+              <input id="result" type="text" class="bg-red-100 w-full flex-grow " />
             </div>
+            <div class="w-1/2">
+              Procent TVA
+               </div>
+            <div class="w-1/2 flex my-1">
+             <input id="input3" type="text" class="bg-red-100 w-full flex-grow" />
+            </div>
+            <div class="w-1/2">
+              Valoare TVA
+             </div>
+             <div class="w-1/2 flex  my-1">
+             <input id="input3" type="text" class="bg-red-100 w-full flex-grow" />
+             </div>
+             <div class="w-1/2">
+             Rezultat cu TVA inclus
+             </div>
+            <div class="w-1/2 flex my-1">
+            <input id="input3" type="text" class="bg-red-100 w-full flex-grow" />
+            </div>
+
+
             <div>
               <input type="reset" value="Reset" class="bg-red-300">
 
               <button onclick="copyResult()" class="bg-red-300">Copy result</button>
-            </div>
-          </div>
-            <div class="w-1/2 column">
-          
-              <input id="tva" label="tva"  class="bg-blue-400">
-            
-              <input id="valtva" label="procent tva " type="result" type="number" class="bg-blue-400">
-
-              <input id="rezultattva" label="rezultat cu tva" type="number" class="bg-blue-400">
-
             </div>
           </div>
         </div>
