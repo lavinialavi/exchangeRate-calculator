@@ -45,4 +45,27 @@ function calculate(from, to, amount) {
         .catch(function (err) {
             console.log(err)
         })
+
+    }
+function calculatortva(){
+    var result= document.getElementById("result").value;
+    var tva= document.getElementById("tva").value;
+    var tva1= tva / 100 ;
+    // var m= tva/100;
+    // var n= result*m;
+    
+    document.getElementById('valtva').innerHTML =result * tva1;
+    
+    
+    
 }
+
+
+
+
+// function calculPretcuTva(){
+//     var result= document.getElementById("result").value;
+//     var result2=  document.getElementById("resulttva");
+
+//     calculate(result,result2 ).then(resp=>
+//         document.getElementById("")
