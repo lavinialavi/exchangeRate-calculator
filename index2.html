@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <form>
+        Value 1: <input type="text" name="val1"><br>
+        Value 2: <input type="text" name="val2"><br>
+        Total: <input type="text" name="sum"><br>
+        VAT:<input type="text" name="vat"><br>
+        <input type="button" value="Sum" onclick="sumTotal()">
+
+    </form>
+
+    <script>
+
+
+    function sumTotal() {
+        let val1 = document.getElementsByName("val1")[0].value;
+        let val2 = document.getElementsByName("val2")[0].value;
+        let sum = Number(val1) + Number(val2);
+        document.getElementsByName("sum")[0].value = sum;
+        vatCalc(sum);
+    }
+    function vatCalc (sum) {
+    //  let vat= document.getElementsByName("vat")
+        var sumVat =0.20;
+         let vat = sumVat*sum;
+         document.getElementsByName("vat")[0].value = vat;
+}
+    </script>
+
+</body>
+</html>

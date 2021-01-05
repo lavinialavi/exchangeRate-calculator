@@ -47,16 +47,20 @@ function calculate(from, to, amount) {
         })
 
     }
-function calculatortva(){
-    var result= document.getElementById("result").value;
-    var tva= document.getElementById("tva").value;
-    var tva1= tva / 100 ;
-    // var m= tva/100;
-    // var n= result*m;
+function calculatorTva (){
+     var result= document.getElementById("result").value;
+     var tva= document.getElementById("tva").value;
+     var procent =tva/100;
+   document.getElementById("valtva").value= procent;
+   calcVat(procent);
     
-    document.getElementById('valtva').innerHTML =result * tva1;
-    
-    
+   
+
+    function calcVat (procent){
+        var result= document.getElementById("result").value;
+        let bigresult= result* procent;
+        document.getElementById("derezultattva").innerHTML=bigresult;
+    }
     
 }
 
@@ -69,3 +73,8 @@ function calculatortva(){
 
 //     calculate(result,result2 ).then(resp=>
 //         document.getElementById("")
+
+
+
+
+
